@@ -31,7 +31,8 @@ sudo ./install_prereq install-unpackaged
 cd $SCRIPTDIR/asterisk
 ./contrib/scripts/get_mp3_source.sh
 cd $SCRIPTDIR/asterisk
-./configure
+mkdir /var/run/asterisk
+./configure --with-jansson-bundled
 cd menuselect
 make
 cd ..
